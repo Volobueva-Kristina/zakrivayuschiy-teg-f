@@ -12,3 +12,31 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes move-arrow {
+  from {
+    left: -22px;
+  }
+
+  to {
+    left: -26px;
+  }
+}
+@keyframes icon-scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes icon-sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

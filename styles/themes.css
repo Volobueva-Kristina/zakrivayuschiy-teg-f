@@ -4,3 +4,84 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-dark {
+  --min-font-weight: 465;
+  --max-font-weight: 785;
+  --main-color: #00cc14;
+  --bg-color: #000;
+  --button-color: #00cc14;
+  --sparks: #ff0000;
+  --contour: #00cc14;
+  --background-image-gradient: repeating-linear-gradient(
+      to right,
+      #000 0px,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000 0px,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c, #004306 100%);
+}
+
+:root.theme-light {
+  --min-font-weight: 400;
+  --max-font-weight: 700;
+  --main-color: #000;
+  --bg-color: #fff;
+  --button-color: #fff;
+  --sparks: #ff0000;
+  --contour: #000;
+  --background-image-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --min-font-weight: 400;
+    --max-font-weight: 700;
+    --main-color: #000;
+    --bg-color: #fff;
+    --button-color: #fff;
+    --sparks: #ff0000;
+    --contour: #000;
+    --background-image-gradient: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0px,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0px,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sparks: #ff0000;
+    --contour: #00cc14;
+  }
+}
