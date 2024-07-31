@@ -97,7 +97,7 @@
   font-size: 14px;
   line-height: 14px;
   position: relative;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease; 
 }
 
 .theme-menu__button::after {
@@ -109,7 +109,7 @@
   block-size: 2px;
   inline-size: 0;
   background: currentColor;
-  transition: width 0.3s ease-out;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .theme-menu__button:hover {
@@ -174,6 +174,10 @@
 }
 
 .theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-inline-start: 18px;
   margin-block-start: var(--container-padding-md);
 }
 
@@ -194,13 +198,6 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-}
-
-.theme-menu__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-inline-start: 18px;
 }
 
 .card__image-block {
@@ -369,7 +366,7 @@
   font-size: 14px;
   font-variation-settings: "wght" var(--min-font-weight, 400);
   line-height: 12.6px;
-  transition: all 0.5s;
+  transition: background-color 0.5s;
   align-items: center;
   color: var(--button-color, #fff);
   background-color: var(--bg-color, #fff);
