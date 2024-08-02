@@ -383,17 +383,10 @@
 dialog {
   position: fixed;
   inset: 0;
-  display: grid;
-  transition: opacity 0.3s ease-in-out;
   max-inline-size: 353px;
   inline-size: 100%;
   min-inline-size: 341px;
   padding: 30px 30px 30px 27px;
-}
-
-dialog:not([open]) {
-  opacity: 0;
-  pointer-events: none;
 }
 
 dialog::backdrop {
@@ -401,7 +394,7 @@ dialog::backdrop {
   opacity: 0.75;
 }
 
-.dialog__container {
+.dialog__container[open] {
   display: flex;
   flex-direction: column;
   gap: 30px;
