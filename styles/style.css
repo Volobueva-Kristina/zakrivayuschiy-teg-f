@@ -475,12 +475,12 @@ dialog::backdrop {
   .footer__button {
     flex-direction: column;
   }
-  .section__block {
-    gap: 3.3rem;
-  }
   .footer__button-icon {
     width: 30px;
     height: 30px;
+  }
+  .section__block {
+    gap: 3.3rem;
   }
   .dialog__container {
     border: 30px 42px;
