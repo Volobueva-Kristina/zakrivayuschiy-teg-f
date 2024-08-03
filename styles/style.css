@@ -245,7 +245,7 @@
 }
 
 .card__content {
-  padding: 29px 25px 23px 25px;
+  padding: 29px 25px 25.5px 25px;
   display: flex;
   flex-direction: column;
   gap: var(--container-padding-md, 25px);
@@ -280,8 +280,10 @@
 .card__icon-button {
   border: 2px solid transparent;
   padding: 0;
+  block-size: 38px;
   background-color: transparent;
   line-height: 12.6px;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -289,7 +291,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: var(--border);
+  border: var(--border);
 }
 
 .sparks {
@@ -483,7 +485,7 @@ dialog::backdrop {
     padding: 3.5px 10px;
   }
   .card__content {
-    padding: 29px 25px 22px;
+    padding: 29px 25px 24.4px;
   }
   .footer__button {
     flex-direction: column;
