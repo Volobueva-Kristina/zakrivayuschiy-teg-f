@@ -109,7 +109,7 @@
   block-size: 2px;
   inline-size: 0;
   background: currentColor;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: inline-size 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .theme-menu__button:hover {
@@ -127,7 +127,7 @@
 
 .theme-menu__button:focus-visible::after {
   inline-size: 100%;
-  will-change: transform;
+  will-change: inline-size;
 }
 
 .header {
@@ -223,6 +223,7 @@
   color: var(--main-color, #000);
   text-shadow: 1px 1px 1px var(--bg-color, #fff);
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 .card__title {
@@ -281,6 +282,14 @@
   padding: 0;
   background-color: transparent;
   line-height: 12.6px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: var(--border);
 }
 
 .sparks {
@@ -398,6 +407,8 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border: var(--border);
+  background: var(--bg-color);
 }
 
 .dialog__title {
@@ -431,6 +442,8 @@ dialog::backdrop {
   display: flex;
   gap: 20px;
   align-items: center;
+  color: var(--main-color);
+  stroke: var(--main-color);
 }
 
 .filter-brightness {
